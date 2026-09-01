@@ -12,6 +12,7 @@ class DatabaseOperations:
     async def connect(self):
         """Create connection pool to database"""
         try:
+            ssl_mode = 'require' if config.DB_HOST and 'supabase.co' in config.DB_HOST else False
             self.pool = await asyncpg.create_pool(
                 host=config.DB_HOST,
                 port=config.DB_PORT,
@@ -19,7 +20,8 @@ class DatabaseOperations:
                 user=config.DB_USER,
                 password=config.DB_PASSWORD,
                 min_size=5,
-                max_size=20
+                max_size=20,
+                ssl=ssl_mode
             )
             logger.info("Database connected successfully")
             return True
