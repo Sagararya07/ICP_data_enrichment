@@ -8,6 +8,7 @@ from utils.logger import logger
 class DatabaseOperations:
     def __init__(self):
         self.pool = None
+        self.last_error = None
 
     async def connect(self):
         """Create connection pool to database"""
@@ -26,6 +27,7 @@ class DatabaseOperations:
             logger.info("Database connected successfully")
             return True
         except Exception as e:
+            self.last_error = str(e)
             logger.error(f"Database connection failed: {str(e)}")
             return False
 

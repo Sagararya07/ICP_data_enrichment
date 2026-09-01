@@ -104,7 +104,8 @@ async def start_enrichment(background_tasks: BackgroundTasks):
 @app.get("/api/status")
 async def get_status():
     if not app.state.pool:
-        raise HTTPException(status_code=500, detail="Database not connected.")
+        error_msg = db_ops.last_error or "Unknown database error"
+        raise HTTPException(status_code=500, detail=f"Database not connected. Error: {error_msg}")
     
     stats = await db_ops.get_processing_stats()
     return stats
