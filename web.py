@@ -1,7 +1,9 @@
 import os
-import subprocess
+import asyncio
 import pandas as pd
 from io import BytesIO
+from scripts.load_csv import load as load_csv_data
+from main import EnrichmentEngine
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -77,25 +79,26 @@ async def upload_csv(file: UploadFile = File(...)):
     df = df.drop_duplicates(subset=['website'])
 
     # Save to a temporary file
-    os.makedirs('data', exist_ok=True)
-    temp_path = 'data/web_upload.csv'
+    os.makedirs('/tmp', exist_ok=True)
+    temp_path = '/tmp/web_upload.csv'
     df.to_csv(temp_path, index=False)
 
-    # Call the existing load_csv script to insert into DB
-    result = subprocess.run(['python', 'scripts/load_csv.py', temp_path], capture_output=True, text=True)
-    
-    if result.returncode != 0:
-        raise HTTPException(status_code=500, detail=f"Database insertion failed: {result.stderr}")
+    # Call the imported load function directly to insert into DB
+    try:
+        await load_csv_data(temp_path)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database insertion failed: {str(e)}")
 
     return {"message": f"Successfully loaded {len(df)} unique companies into the database!"}
+
+async def run_enrichment_task():
+    engine = EnrichmentEngine()
+    await engine.run()
 
 @app.post("/api/enrich")
 async def start_enrichment(background_tasks: BackgroundTasks):
     # Run the enrichment engine as a background process so the request doesn't block
-    def run_engine():
-        subprocess.run(['python', 'scripts/run_enrichment.py'])
-
-    background_tasks.add_task(run_engine)
+    background_tasks.add_task(run_enrichment_task)
     return {"message": "Enrichment engine started."}
 
 @app.get("/api/status")
@@ -125,8 +128,8 @@ async def export_csv(fit_status: str = None):
     filename = f"lumora_leads_{fit_status.lower().replace(' ', '_')}.csv" if fit_status else "lumora_leads_all.csv"
     
     # Write to a temp file and return FileResponse to make downloading easier in FastAPI
-    os.makedirs('data', exist_ok=True)
-    temp_path = f"data/{filename}"
+    os.makedirs('/tmp', exist_ok=True)
+    temp_path = f"/tmp/{filename}"
     df.to_csv(temp_path, index=False)
     
     return FileResponse(temp_path, media_type="text/csv", filename=filename)
