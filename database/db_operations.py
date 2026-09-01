@@ -40,8 +40,8 @@ class DatabaseOperations:
             logger.info("Database connected successfully")
             return True
         except Exception as e:
-            self.last_error = str(e)
-            logger.error(f"Database connection failed: {str(e)}")
+            self.last_error = f"Tried connecting to {db_host}:{db_port} - {str(e)}"
+            logger.error(f"Database connection failed: {self.last_error}")
             return False
 
     async def get_unprocessed_companies(self, limit=1000):
