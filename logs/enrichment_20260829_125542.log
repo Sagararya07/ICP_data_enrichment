@@ -1,0 +1,3 @@
+2026-08-29 12:55:43,776 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 12:55:45,907 - lumora_enrichment - INFO - Loaded 17 companies from data/clean_user_companies.csv
+2026-08-29 12:55:46,019 - lumora_enrichment - INFO - Database connection closed

@@ -1,0 +1,4 @@
+2026-08-29 13:11:18,715 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 13:11:18,715 - lumora_enrichment - INFO - Adding icp_fit_score and icp_status columns to leads table...
+2026-08-29 13:11:18,955 - lumora_enrichment - INFO - Successfully updated database schema!
+2026-08-29 13:11:19,176 - lumora_enrichment - INFO - Database connection closed

@@ -1,0 +1,8 @@
+2026-08-29 06:56:53,744 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-29 06:56:53,745 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-29 06:56:53,862 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 06:56:53,863 - lumora_enrichment - INFO - Processing batch 1
+2026-08-29 06:56:53,881 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-29 06:56:53,883 - lumora_enrichment - INFO - No more companies to process
+2026-08-29 06:56:53,884 - lumora_enrichment - INFO - Processing complete. Processed: 0, Failed: 0
+2026-08-29 06:56:53,889 - lumora_enrichment - INFO - Database connection closed

@@ -1,0 +1,5 @@
+2026-08-29 07:00:05,862 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-29 07:00:05,863 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-29 07:00:05,893 - lumora_enrichment - ERROR - Database connection failed: [Errno 101] Network is unreachable
+2026-08-29 07:00:05,894 - lumora_enrichment - ERROR - Failed to connect to database
+2026-08-29 07:00:05,894 - lumora_enrichment - ERROR - Setup failed

@@ -1,0 +1,50 @@
+2026-08-29 12:55:46,606 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-29 12:55:46,607 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-29 12:55:48,291 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 12:55:48,292 - lumora_enrichment - INFO - Processing batch 1
+2026-08-29 12:55:48,512 - lumora_enrichment - INFO - Found 17 companies to process
+2026-08-29 12:55:48,621 - lumora_enrichment - DEBUG - Processing: Northwestern University (https://northwestern.edu)
+2026-08-29 12:55:48,648 - lumora_enrichment - DEBUG - Processing: McKinsey & Company (https://mckinsey.com)
+2026-08-29 12:55:48,658 - lumora_enrichment - DEBUG - Processing: University of Colorado Boulder (https://colorado.edu)
+2026-08-29 12:55:48,658 - lumora_enrichment - DEBUG - Processing: Deloitte (https://deloitte.com)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Winningtemp (https://winningtemp.com)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Empower (https://empower.com)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Essentia Health (https://essentiahealth.org)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Michigan State University (https://msu.edu)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Gwinnett County Public Schools (https://gcpsjobs.org)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: University of California, Davis (https://ucdavis.edu)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: University of Wisconsin-Madison (https://wisc.edu)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Elementor (https://elementor.com)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: Ontop (https://getontop.com)
+2026-08-29 12:55:48,659 - lumora_enrichment - DEBUG - Processing: University of Alabama at Birmingham (https://uab.edu)
+2026-08-29 12:55:48,660 - lumora_enrichment - DEBUG - Processing: Global66 (https://global66.com)
+2026-08-29 12:55:48,660 - lumora_enrichment - DEBUG - Processing: UC San Diego (https://ucsd.edu)
+2026-08-29 12:55:48,660 - lumora_enrichment - DEBUG - Processing: Highmark Health (https://highmarkhealth.org)
+2026-08-29 12:55:49,071 - lumora_enrichment - WARNING - Failed to fetch https://global66.com: Status 403
+2026-08-29 12:55:49,073 - lumora_enrichment - WARNING - No data scraped for Global66
+2026-08-29 12:55:49,700 - lumora_enrichment - WARNING - Failed to fetch https://mckinsey.com: Status 403
+2026-08-29 12:55:49,702 - lumora_enrichment - WARNING - No data scraped for McKinsey & Company
+2026-08-29 12:56:11,321 - lumora_enrichment - WARNING - Giving up on https://highmarkhealth.org after 3 attempts: Cannot connect to host highmarkhealth.org:443 ssl:default [The remote computer refused the network connection]
+2026-08-29 12:56:11,321 - lumora_enrichment - WARNING - No data scraped for Highmark Health
+2026-08-29 12:56:40,499 - lumora_enrichment - WARNING - Giving up on https://northwestern.edu after 3 attempts: 
+2026-08-29 12:56:40,499 - lumora_enrichment - WARNING - No data scraped for Northwestern University
+2026-08-29 12:56:41,268 - lumora_enrichment - DEBUG - Updated company ID: 9
+2026-08-29 12:56:41,487 - lumora_enrichment - DEBUG - Updated company ID: 10
+2026-08-29 12:56:41,706 - lumora_enrichment - DEBUG - Updated company ID: 11
+2026-08-29 12:56:41,925 - lumora_enrichment - DEBUG - Updated company ID: 12
+2026-08-29 12:56:42,145 - lumora_enrichment - DEBUG - Updated company ID: 13
+2026-08-29 12:56:42,363 - lumora_enrichment - DEBUG - Updated company ID: 14
+2026-08-29 12:56:42,581 - lumora_enrichment - DEBUG - Updated company ID: 15
+2026-08-29 12:56:42,799 - lumora_enrichment - DEBUG - Updated company ID: 16
+2026-08-29 12:56:43,018 - lumora_enrichment - DEBUG - Updated company ID: 17
+2026-08-29 12:56:43,238 - lumora_enrichment - DEBUG - Updated company ID: 18
+2026-08-29 12:56:43,455 - lumora_enrichment - DEBUG - Updated company ID: 19
+2026-08-29 12:56:43,675 - lumora_enrichment - DEBUG - Updated company ID: 20
+2026-08-29 12:56:44,111 - lumora_enrichment - DEBUG - Updated company ID: 22
+2026-08-29 12:56:44,438 - lumora_enrichment - INFO - Batch complete: 13 updated, 4 failed
+2026-08-29 12:56:44,765 - lumora_enrichment - INFO - Progress: 13/17 enriched, 4 failed
+2026-08-29 12:56:44,765 - lumora_enrichment - INFO - Processing batch 2
+2026-08-29 12:56:44,874 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-29 12:56:44,983 - lumora_enrichment - INFO - No more companies to process
+2026-08-29 12:56:44,984 - lumora_enrichment - INFO - Processing complete. Processed: 13, Failed: 4
+2026-08-29 12:56:45,097 - lumora_enrichment - INFO - Database connection closed

@@ -1,0 +1,13 @@
+2026-08-29 12:28:04,219 - lumora_enrichment - INFO - Running setup tests...
+2026-08-29 12:28:04,219 - lumora_enrichment - INFO - Testing database connection...
+2026-08-29 12:28:05,906 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 12:28:06,271 - lumora_enrichment - INFO - Database OK. Total companies: 2
+2026-08-29 12:28:06,382 - lumora_enrichment - INFO - Database connection closed
+2026-08-29 12:28:07,080 - lumora_enrichment - INFO - Testing web scraping...
+2026-08-29 12:28:07,175 - lumora_enrichment - INFO - Scraped https://example.com: Title: Example Domain
+2026-08-29 12:28:07,175 - lumora_enrichment - INFO - Scraped https://www.iana.org: Title: Internet Assigned Numbers Authority
+2026-08-29 12:28:07,227 - lumora_enrichment - INFO - Testing AI analysis...
+2026-08-29 12:28:07,227 - lumora_enrichment - INFO - Industry detected: B2B_SaaS (score: 3)
+2026-08-29 12:28:07,227 - lumora_enrichment - INFO - Business model: SaaS (score: 2)
+2026-08-29 12:28:07,228 - lumora_enrichment - INFO - Estimated annual customer value: $1,188.00
+2026-08-29 12:28:07,228 - lumora_enrichment - INFO - All tests completed!

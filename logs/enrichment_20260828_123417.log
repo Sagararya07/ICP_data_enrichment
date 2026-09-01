@@ -1,0 +1,17 @@
+2026-08-28 12:34:17,795 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-28 12:34:17,796 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-28 12:34:17,892 - lumora_enrichment - INFO - Database connected successfully
+2026-08-28 12:34:17,893 - lumora_enrichment - INFO - Processing batch 1
+2026-08-28 12:34:17,896 - lumora_enrichment - INFO - Found 2 companies to process
+2026-08-28 12:34:17,897 - lumora_enrichment - DEBUG - Processing: TechGrowth Solutions (techgrowth.com)
+2026-08-28 12:34:17,906 - lumora_enrichment - DEBUG - Processing: QuickBite Restaurant Group (quickbite.com)
+2026-08-28 12:34:22,446 - lumora_enrichment - WARNING - Giving up on https://quickbite.com after 3 attempts: Cannot connect to host quickbite.com:443 ssl:default [Name or service not known]
+2026-08-28 12:34:22,448 - lumora_enrichment - WARNING - No data scraped for QuickBite Restaurant Group
+2026-08-28 12:34:22,453 - lumora_enrichment - DEBUG - Updated company ID: 1
+2026-08-28 12:34:22,458 - lumora_enrichment - INFO - Batch complete: 1 updated, 1 failed
+2026-08-28 12:34:22,462 - lumora_enrichment - INFO - Progress: 1/2 enriched, 1 failed
+2026-08-28 12:34:22,463 - lumora_enrichment - INFO - Processing batch 2
+2026-08-28 12:34:22,464 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-28 12:34:22,465 - lumora_enrichment - INFO - No more companies to process
+2026-08-28 12:34:22,466 - lumora_enrichment - INFO - Processing complete. Processed: 1, Failed: 1
+2026-08-28 12:34:22,477 - lumora_enrichment - INFO - Database connection closed

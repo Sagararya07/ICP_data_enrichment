@@ -1,0 +1,14 @@
+2026-08-29 17:00:54,284 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-29 17:00:54,285 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-29 17:00:56,963 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 17:00:56,964 - lumora_enrichment - INFO - Processing batch 1
+2026-08-29 17:00:57,186 - lumora_enrichment - INFO - Found 1 companies to process
+2026-08-29 17:00:57,297 - lumora_enrichment - DEBUG - Processing: Hitachi Vantara (https://hitachivantara.com)
+2026-08-29 17:01:00,143 - lumora_enrichment - DEBUG - Updated company ID: 41
+2026-08-29 17:01:00,254 - lumora_enrichment - INFO - Batch complete: 1 updated, 0 failed
+2026-08-29 17:01:00,586 - lumora_enrichment - INFO - Progress: 27/35 enriched, 8 failed
+2026-08-29 17:01:00,586 - lumora_enrichment - INFO - Processing batch 2
+2026-08-29 17:01:00,697 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-29 17:01:00,808 - lumora_enrichment - INFO - No more companies to process
+2026-08-29 17:01:00,809 - lumora_enrichment - INFO - Processing complete. Processed: 1, Failed: 0
+2026-08-29 17:01:00,925 - lumora_enrichment - INFO - Database connection closed

@@ -1,0 +1,20 @@
+2026-08-29 12:51:37,659 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-29 12:51:37,659 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-29 12:51:39,342 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 12:51:39,343 - lumora_enrichment - INFO - Processing batch 1
+2026-08-29 12:51:39,577 - lumora_enrichment - INFO - Found 4 companies to process
+2026-08-29 12:51:39,686 - lumora_enrichment - DEBUG - Processing: Stripe (stripe.com)
+2026-08-29 12:51:39,725 - lumora_enrichment - DEBUG - Processing: Vercel (vercel.com)
+2026-08-29 12:51:39,726 - lumora_enrichment - DEBUG - Processing: Supabase (supabase.com)
+2026-08-29 12:51:39,726 - lumora_enrichment - DEBUG - Processing: Linear (linear.app)
+2026-08-29 12:51:42,522 - lumora_enrichment - DEBUG - Updated company ID: 3
+2026-08-29 12:51:42,743 - lumora_enrichment - DEBUG - Updated company ID: 4
+2026-08-29 12:51:42,964 - lumora_enrichment - DEBUG - Updated company ID: 5
+2026-08-29 12:51:43,184 - lumora_enrichment - DEBUG - Updated company ID: 6
+2026-08-29 12:51:43,295 - lumora_enrichment - INFO - Batch complete: 4 updated, 0 failed
+2026-08-29 12:51:43,625 - lumora_enrichment - INFO - Progress: 5/6 enriched, 1 failed
+2026-08-29 12:51:43,625 - lumora_enrichment - INFO - Processing batch 2
+2026-08-29 12:51:43,735 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-29 12:51:43,845 - lumora_enrichment - INFO - No more companies to process
+2026-08-29 12:51:43,845 - lumora_enrichment - INFO - Processing complete. Processed: 4, Failed: 0
+2026-08-29 12:51:43,960 - lumora_enrichment - INFO - Database connection closed

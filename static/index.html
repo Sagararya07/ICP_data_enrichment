@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumora Enrichment Engine</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob shape-1"></div>
+        <div class="blob shape-2"></div>
+        <div class="blob shape-3"></div>
+    </div>
+
+    <div class="app-container glass-panel">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-chart-network"></i>
+                <h1>Lumora</h1>
+            </div>
+            <p class="subtitle">AI-Powered ICP Enrichment Engine</p>
+        </header>
+
+        <main>
+            <!-- Step 1: Upload CSV -->
+            <section class="upload-section glass-card" id="uploadSection">
+                <h2><span class="step-num">1</span> Upload Data</h2>
+                <p>Upload a CSV file containing <code>company_name</code> and <code>website</code> columns to begin.</p>
+                
+                <div class="drop-zone" id="dropZone">
+                    <i class="fa-solid fa-cloud-arrow-up drop-icon"></i>
+                    <p class="drop-text">Drag and drop your company list here</p>
+                    <p class="drop-subtext">Supports .CSV and Excel (.xlsx) files with 'Company Name' and 'Website' columns</p>
+                    <input type="file" id="fileInput" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" hidden>
+                    <button class="btn btn-secondary mt-2" onclick="document.getElementById('fileInput').click()">Browse Files</button>
+                </div>
+                <div class="file-details" id="fileDetails" style="display: none;">
+                    <i class="fa-solid fa-file-csv"></i>
+                    <span id="fileName">companies.csv</span>
+                    <button class="btn-icon" id="removeFileBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <div class="action-row">
+                    <button class="btn btn-primary" id="uploadBtn" disabled>Upload to Database</button>
+                </div>
+                <div id="uploadStatus" class="status-msg"></div>
+            </section>
+
+            <!-- Step 2: Run Enrichment -->
+            <section class="enrich-section glass-card" id="enrichSection">
+                <h2><span class="step-num">2</span> Enrichment Engine</h2>
+                <div class="stats-overview">
+                    <div class="stat-box">
+                        <span class="stat-label">Pending</span>
+                        <span class="stat-value" id="pendingCount">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Enriched</span>
+                        <span class="stat-value text-success" id="enrichedCount">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">🔥 Strong Fits</span>
+                        <span class="stat-value text-accent" id="strongFitCount" style="color: var(--accent);">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">⭐ Potential Fits</span>
+                        <span class="stat-value" id="potentialFitCount" style="color: #fbbf24;">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">❌ Not a Fit</span>
+                        <span class="stat-value text-muted" id="notFitCount">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Failed</span>
+                        <span class="stat-value text-danger" id="failedCount">0</span>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-header">
+                        <span class="progress-label">Overall Progress</span>
+                        <span class="progress-percent" id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progressBar" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="actions-section" style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
+                    <button class="btn btn-primary" id="runEnrichmentBtn">
+                        <i class="fa-solid fa-play"></i> Start Enrichment
+                    </button>
+                    <button class="btn btn-secondary" id="exportStrongBtn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <i class="fa-solid fa-download text-accent"></i> Strong Fits
+                    </button>
+                    <button class="btn btn-secondary" id="exportPotentialBtn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <i class="fa-solid fa-download" style="color: #fbbf24;"></i> Potential Fits
+                    </button>
+                    <button class="btn btn-secondary" id="exportAllBtn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <i class="fa-solid fa-download"></i> All Results
+                    </button>
+                </div>
+                
+                <div id="engineStatus" class="status-msg"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="static/app.js"></script>
+</body>
+</html>

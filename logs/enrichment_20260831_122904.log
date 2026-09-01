@@ -1,0 +1,56 @@
+2026-08-31 12:29:04,892 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-31 12:29:04,892 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-31 12:29:06,697 - lumora_enrichment - INFO - Database connected successfully
+2026-08-31 12:29:06,698 - lumora_enrichment - INFO - Processing batch 1
+2026-08-31 12:29:06,931 - lumora_enrichment - INFO - Found 13 companies to process
+2026-08-31 12:29:07,043 - lumora_enrichment - DEBUG - Processing: Northwestern University (https://northwestern.edu)
+2026-08-31 12:29:07,048 - lumora_enrichment - DEBUG - Processing: McKinsey & Company (https://mckinsey.com)
+2026-08-31 12:29:07,060 - lumora_enrichment - DEBUG - Processing: Global66 (https://global66.com)
+2026-08-31 12:29:07,062 - lumora_enrichment - DEBUG - Processing: Highmark Health (https://highmarkhealth.org)
+2026-08-31 12:29:07,064 - lumora_enrichment - DEBUG - Processing: Northwestern University (https://northwestern.edu)
+2026-08-31 12:29:07,065 - lumora_enrichment - DEBUG - Processing: McKinsey & Company (https://mckinsey.com)
+2026-08-31 12:29:07,066 - lumora_enrichment - DEBUG - Processing: Global66 (https://global66.com)
+2026-08-31 12:29:07,069 - lumora_enrichment - DEBUG - Processing: Highmark Health (https://highmarkhealth.org)
+2026-08-31 12:29:07,070 - lumora_enrichment - DEBUG - Processing: Freshworks (https://freshworks.com)
+2026-08-31 12:29:07,071 - lumora_enrichment - DEBUG - Processing: LeadSquared (https://leadsquared.com)
+2026-08-31 12:29:07,072 - lumora_enrichment - DEBUG - Processing: 4i apps solutions | Cloud Solutions Provider (https://4iapps.com)
+2026-08-31 12:29:07,075 - lumora_enrichment - DEBUG - Processing: Brio Technologies (https://briotech.com)
+2026-08-31 12:29:07,077 - lumora_enrichment - DEBUG - Processing: Knack Systems (https://knacksystems.com)
+2026-08-31 12:29:11,448 - lumora_enrichment - WARNING - Primary fetch failed for https://freshworks.com: 0, message='', url=URL('https://www.freshworks.com/')
+2026-08-31 12:29:11,461 - lumora_enrichment - WARNING - Primary fetch failed for https://leadsquared.com: 0, message='', url=URL('https://www.leadsquared.com/')
+2026-08-31 12:29:12,237 - lumora_enrichment - WARNING - Primary fetch failed for https://global66.com: 0, message='', url=URL('https://www.global66.com')
+2026-08-31 12:29:12,239 - lumora_enrichment - WARNING - Primary fetch failed for https://global66.com: 0, message='', url=URL('https://www.global66.com')
+2026-08-31 12:29:15,760 - lumora_enrichment - WARNING - Fallback fetch failed for http://freshworks.com: 0, message='', url=URL('https://www.freshworks.com/')
+2026-08-31 12:29:15,764 - lumora_enrichment - WARNING - No data scraped for Freshworks
+2026-08-31 12:29:15,811 - lumora_enrichment - WARNING - Fallback fetch failed for http://leadsquared.com: 0, message='', url=URL('https://www.leadsquared.com/')
+2026-08-31 12:29:15,815 - lumora_enrichment - WARNING - No data scraped for LeadSquared
+2026-08-31 12:29:16,522 - lumora_enrichment - WARNING - Fallback fetch failed for http://global66.com: 0, message='', url=URL('https://www.global66.com')
+2026-08-31 12:29:16,528 - lumora_enrichment - WARNING - No data scraped for Global66
+2026-08-31 12:29:16,530 - lumora_enrichment - WARNING - Fallback fetch failed for http://global66.com: 0, message='', url=URL('https://www.global66.com')
+2026-08-31 12:29:16,536 - lumora_enrichment - WARNING - No data scraped for Global66
+2026-08-31 12:29:29,647 - lumora_enrichment - WARNING - Primary fetch failed for https://highmarkhealth.org: Cannot connect to host highmarkhealth.org:443 ssl:default [The remote computer refused the network connection]
+2026-08-31 12:29:29,656 - lumora_enrichment - WARNING - Primary fetch failed for https://highmarkhealth.org: Cannot connect to host highmarkhealth.org:443 ssl:default [The remote computer refused the network connection]
+2026-08-31 12:29:54,302 - lumora_enrichment - WARNING - Primary fetch failed for https://knacksystems.com: Cannot connect to host knacksystems.com:443 ssl:default [The semaphore timeout period has expired]
+2026-08-31 12:30:19,457 - lumora_enrichment - WARNING - Primary fetch failed for https://mckinsey.com: [WinError 121] The semaphore timeout period has expired
+2026-08-31 12:30:25,320 - lumora_enrichment - WARNING - Primary fetch failed for https://mckinsey.com: 
+2026-08-31 12:30:28,654 - lumora_enrichment - WARNING - Primary fetch failed for https://briotech.com: 
+2026-08-31 12:30:43,021 - lumora_enrichment - WARNING - Fallback fetch failed for http://knacksystems.com: Cannot connect to host knacksystems.com:80 ssl:default [The semaphore timeout period has expired]
+2026-08-31 12:30:43,022 - lumora_enrichment - WARNING - No data scraped for Knack Systems
+2026-08-31 12:31:41,335 - lumora_enrichment - WARNING - Fallback fetch failed for http://mckinsey.com: 
+2026-08-31 12:31:41,336 - lumora_enrichment - WARNING - No data scraped for McKinsey & Company
+2026-08-31 12:31:47,312 - lumora_enrichment - WARNING - Fallback fetch failed for http://mckinsey.com: 
+2026-08-31 12:31:47,314 - lumora_enrichment - WARNING - No data scraped for McKinsey & Company
+2026-08-31 12:31:50,331 - lumora_enrichment - WARNING - Fallback fetch failed for http://briotech.com: 
+2026-08-31 12:31:50,333 - lumora_enrichment - WARNING - No data scraped for Brio Technologies
+2026-08-31 12:31:50,571 - lumora_enrichment - DEBUG - Updated company ID: 7
+2026-08-31 12:31:51,346 - lumora_enrichment - DEBUG - Updated company ID: 23
+2026-08-31 12:31:51,569 - lumora_enrichment - DEBUG - Updated company ID: 24
+2026-08-31 12:31:52,230 - lumora_enrichment - DEBUG - Updated company ID: 40
+2026-08-31 12:31:52,897 - lumora_enrichment - DEBUG - Updated company ID: 56
+2026-08-31 12:31:53,450 - lumora_enrichment - INFO - Batch complete: 5 updated, 8 failed
+2026-08-31 12:31:53,783 - lumora_enrichment - INFO - Progress: 76/84 enriched, 8 failed
+2026-08-31 12:31:53,784 - lumora_enrichment - INFO - Processing batch 2
+2026-08-31 12:31:53,895 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-31 12:31:54,006 - lumora_enrichment - INFO - No more companies to process
+2026-08-31 12:31:54,007 - lumora_enrichment - INFO - Processing complete. Processed: 5, Failed: 8
+2026-08-31 12:31:54,123 - lumora_enrichment - INFO - Database connection closed

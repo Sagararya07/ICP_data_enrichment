@@ -1,0 +1,115 @@
+2026-08-31 12:20:24,190 - lumora_enrichment - INFO - Starting with batch size: 500
+2026-08-31 12:20:24,191 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-08-31 12:20:26,026 - lumora_enrichment - INFO - Database connected successfully
+2026-08-31 12:20:26,027 - lumora_enrichment - INFO - Processing batch 1
+2026-08-31 12:20:26,257 - lumora_enrichment - INFO - Found 49 companies to process
+2026-08-31 12:20:26,368 - lumora_enrichment - DEBUG - Processing: Salesforce (https://salesforce.com)
+2026-08-31 12:20:26,503 - lumora_enrichment - DEBUG - Processing: Microsoft (https://microsoft.com)
+2026-08-31 12:20:26,505 - lumora_enrichment - DEBUG - Processing: Google (https://google.com)
+2026-08-31 12:20:26,507 - lumora_enrichment - DEBUG - Processing: Scoro (https://scoro.com)
+2026-08-31 12:20:26,509 - lumora_enrichment - DEBUG - Processing: Freshworks (https://freshworks.com)
+2026-08-31 12:20:26,513 - lumora_enrichment - DEBUG - Processing: LeadSquared (https://leadsquared.com)
+2026-08-31 12:20:26,513 - lumora_enrichment - DEBUG - Processing: LatentView Analytics (https://latentview.com)
+2026-08-31 12:20:26,515 - lumora_enrichment - DEBUG - Processing: METAPLORE Solutions Pvt Ltd (https://metaplore.com)
+2026-08-31 12:20:26,521 - lumora_enrichment - DEBUG - Processing: Alchemy Techsol (https://alchemytechsol.com)
+2026-08-31 12:20:26,521 - lumora_enrichment - DEBUG - Processing: Binary Global (https://binaryglobal.com)
+2026-08-31 12:20:26,522 - lumora_enrichment - DEBUG - Processing: CEPTES Software Pvt. Ltd. (https://ceptes.com)
+2026-08-31 12:20:26,522 - lumora_enrichment - DEBUG - Processing: Lagozon Technologies Private Limited (https://lagozon.com)
+2026-08-31 12:20:26,523 - lumora_enrichment - DEBUG - Processing: WarpDrive Tech Works (https://warpdrivetech.in)
+2026-08-31 12:20:26,523 - lumora_enrichment - DEBUG - Processing: Yotta Data Services Private Limited (https://yotta.com)
+2026-08-31 12:20:26,523 - lumora_enrichment - DEBUG - Processing: 4i apps solutions | Cloud Solutions Provider (https://4iapps.com)
+2026-08-31 12:20:26,524 - lumora_enrichment - DEBUG - Processing: Noventiq India (https://noventiqindia.com)
+2026-08-31 12:20:26,524 - lumora_enrichment - DEBUG - Processing: Response Informatics (https://responseinformaticsltd.com)
+2026-08-31 12:20:26,525 - lumora_enrichment - DEBUG - Processing: MethodHub (https://methodhub.in)
+2026-08-31 12:20:26,526 - lumora_enrichment - DEBUG - Processing: Twenty Two by 7 Solutions Pvt. Ltd. (https://22by7.in)
+2026-08-31 12:20:26,527 - lumora_enrichment - DEBUG - Processing: Blue Cloud Softech Solutions Limited (https://bluecloudsoftech.com)
+2026-08-31 12:20:26,527 - lumora_enrichment - DEBUG - Processing: AeonX Digital (https://aeonx.digital)
+2026-08-31 12:20:26,528 - lumora_enrichment - DEBUG - Processing: Minfy (https://minfytech.com)
+2026-08-31 12:20:26,528 - lumora_enrichment - DEBUG - Processing: Netcon Technologies (https://netconglobal.com)
+2026-08-31 12:20:26,529 - lumora_enrichment - DEBUG - Processing: COMnet Solutions (Global) (https://comnetinfo.com)
+2026-08-31 12:20:26,529 - lumora_enrichment - DEBUG - Processing: Brio Technologies (https://briotech.com)
+2026-08-31 12:20:26,529 - lumora_enrichment - DEBUG - Processing: NetConnectGlobal (https://netconnectglobal.com)
+2026-08-31 12:20:26,530 - lumora_enrichment - DEBUG - Processing: Ashtech Infotech (India) Pvt Ltd (https://ashinfo.com)
+2026-08-31 12:20:26,530 - lumora_enrichment - DEBUG - Processing: GapBridge (https://gapbridgesoft.com)
+2026-08-31 12:20:26,530 - lumora_enrichment - DEBUG - Processing: iTroSys (https://itrosys.com)
+2026-08-31 12:20:26,531 - lumora_enrichment - DEBUG - Processing: Arrow PC Network (https://arrowpcnetwork.com)
+2026-08-31 12:20:26,531 - lumora_enrichment - DEBUG - Processing: Sysfore Technologies Pvt. Ltd. (https://sysfore.com)
+2026-08-31 12:20:26,533 - lumora_enrichment - DEBUG - Processing: Pentagon System and Services (https://pentagon.co.in)
+2026-08-31 12:20:26,533 - lumora_enrichment - DEBUG - Processing: Merino Consulting Services (https://merinoservices.com)
+2026-08-31 12:20:26,534 - lumora_enrichment - DEBUG - Processing: Mobius Knowledge Services (https://mobiusservices.com)
+2026-08-31 12:20:26,534 - lumora_enrichment - DEBUG - Processing: Uneecops (https://uneecops.com)
+2026-08-31 12:20:26,534 - lumora_enrichment - DEBUG - Processing: Orisenc Technologies (https://orisenc.ai)
+2026-08-31 12:20:26,536 - lumora_enrichment - DEBUG - Processing: Econz Cloud (https://econz.cloud)
+2026-08-31 12:20:26,536 - lumora_enrichment - DEBUG - Processing: Actiknow Consulting Pvt. Ltd. (https://actiknow.com)
+2026-08-31 12:20:26,536 - lumora_enrichment - DEBUG - Processing: ennVee India (https://ennvee.com)
+2026-08-31 12:20:26,537 - lumora_enrichment - DEBUG - Processing: Soffit Infrastructure Services (P) Ltd (https://soffit.in)
+2026-08-31 12:20:26,537 - lumora_enrichment - DEBUG - Processing: Indus Systems & Services (https://indussystem.com)
+2026-08-31 12:20:26,538 - lumora_enrichment - DEBUG - Processing: Axeno Consulting (https://axeno.co)
+2026-08-31 12:20:26,538 - lumora_enrichment - DEBUG - Processing: Worldline (https://worldline.com)
+2026-08-31 12:20:26,538 - lumora_enrichment - DEBUG - Processing: Manthan (https://ey.com)
+2026-08-31 12:20:26,539 - lumora_enrichment - DEBUG - Processing: OCS Consulting (https://ocs-consulting.com)
+2026-08-31 12:20:26,539 - lumora_enrichment - DEBUG - Processing: Recur Club (https://recurclub.com)
+2026-08-31 12:20:26,541 - lumora_enrichment - DEBUG - Processing: Knack Systems (https://knacksystems.com)
+2026-08-31 12:20:26,542 - lumora_enrichment - DEBUG - Processing: INFOCUS CONSULTING SERVICES PVT LTD (https://infocuscs.com)
+2026-08-31 12:20:26,542 - lumora_enrichment - DEBUG - Processing: Innovology (https://innovology.io)
+2026-08-31 12:20:30,343 - lumora_enrichment - WARNING - Failed to fetch https://leadsquared.com: Status 403
+2026-08-31 12:20:30,363 - lumora_enrichment - WARNING - No data scraped for LeadSquared
+2026-08-31 12:20:30,373 - lumora_enrichment - WARNING - Failed to fetch https://freshworks.com: Status 403
+2026-08-31 12:20:30,512 - lumora_enrichment - WARNING - No data scraped for Freshworks
+2026-08-31 12:20:46,474 - lumora_enrichment - WARNING - Failed to fetch https://4iapps.com: Status 307
+2026-08-31 12:20:46,480 - lumora_enrichment - WARNING - No data scraped for 4i apps solutions | Cloud Solutions Provider
+2026-08-31 12:20:46,776 - lumora_enrichment - WARNING - Giving up on https://knacksystems.com after 3 attempts: Cannot connect to host knacksystems.com:443 ssl:default [The remote computer refused the network connection]
+2026-08-31 12:20:46,777 - lumora_enrichment - WARNING - No data scraped for Knack Systems
+2026-08-31 12:21:17,333 - lumora_enrichment - WARNING - Giving up on https://briotech.com after 3 attempts: 
+2026-08-31 12:21:17,334 - lumora_enrichment - WARNING - No data scraped for Brio Technologies
+2026-08-31 12:21:17,574 - lumora_enrichment - DEBUG - Updated company ID: 42
+2026-08-31 12:21:17,798 - lumora_enrichment - DEBUG - Updated company ID: 43
+2026-08-31 12:21:18,025 - lumora_enrichment - DEBUG - Updated company ID: 44
+2026-08-31 12:21:18,248 - lumora_enrichment - DEBUG - Updated company ID: 45
+2026-08-31 12:21:19,020 - lumora_enrichment - DEBUG - Updated company ID: 48
+2026-08-31 12:21:19,248 - lumora_enrichment - DEBUG - Updated company ID: 49
+2026-08-31 12:21:19,470 - lumora_enrichment - DEBUG - Updated company ID: 50
+2026-08-31 12:21:19,690 - lumora_enrichment - DEBUG - Updated company ID: 51
+2026-08-31 12:21:19,911 - lumora_enrichment - DEBUG - Updated company ID: 52
+2026-08-31 12:21:20,133 - lumora_enrichment - DEBUG - Updated company ID: 53
+2026-08-31 12:21:20,362 - lumora_enrichment - DEBUG - Updated company ID: 54
+2026-08-31 12:21:20,584 - lumora_enrichment - DEBUG - Updated company ID: 55
+2026-08-31 12:21:21,027 - lumora_enrichment - DEBUG - Updated company ID: 57
+2026-08-31 12:21:21,245 - lumora_enrichment - DEBUG - Updated company ID: 58
+2026-08-31 12:21:21,467 - lumora_enrichment - DEBUG - Updated company ID: 59
+2026-08-31 12:21:21,687 - lumora_enrichment - DEBUG - Updated company ID: 60
+2026-08-31 12:21:21,908 - lumora_enrichment - DEBUG - Updated company ID: 61
+2026-08-31 12:21:22,135 - lumora_enrichment - DEBUG - Updated company ID: 62
+2026-08-31 12:21:22,366 - lumora_enrichment - DEBUG - Updated company ID: 63
+2026-08-31 12:21:22,583 - lumora_enrichment - DEBUG - Updated company ID: 64
+2026-08-31 12:21:22,803 - lumora_enrichment - DEBUG - Updated company ID: 65
+2026-08-31 12:21:23,235 - lumora_enrichment - DEBUG - Updated company ID: 67
+2026-08-31 12:21:23,454 - lumora_enrichment - DEBUG - Updated company ID: 68
+2026-08-31 12:21:23,684 - lumora_enrichment - DEBUG - Updated company ID: 69
+2026-08-31 12:21:23,898 - lumora_enrichment - DEBUG - Updated company ID: 70
+2026-08-31 12:21:24,130 - lumora_enrichment - DEBUG - Updated company ID: 71
+2026-08-31 12:21:24,369 - lumora_enrichment - DEBUG - Updated company ID: 72
+2026-08-31 12:21:24,590 - lumora_enrichment - DEBUG - Updated company ID: 73
+2026-08-31 12:21:24,812 - lumora_enrichment - DEBUG - Updated company ID: 74
+2026-08-31 12:21:25,034 - lumora_enrichment - DEBUG - Updated company ID: 75
+2026-08-31 12:21:25,255 - lumora_enrichment - DEBUG - Updated company ID: 76
+2026-08-31 12:21:25,475 - lumora_enrichment - DEBUG - Updated company ID: 77
+2026-08-31 12:21:25,693 - lumora_enrichment - DEBUG - Updated company ID: 78
+2026-08-31 12:21:25,913 - lumora_enrichment - DEBUG - Updated company ID: 79
+2026-08-31 12:21:26,134 - lumora_enrichment - DEBUG - Updated company ID: 80
+2026-08-31 12:21:26,355 - lumora_enrichment - DEBUG - Updated company ID: 81
+2026-08-31 12:21:26,583 - lumora_enrichment - DEBUG - Updated company ID: 82
+2026-08-31 12:21:26,805 - lumora_enrichment - DEBUG - Updated company ID: 83
+2026-08-31 12:21:27,027 - lumora_enrichment - DEBUG - Updated company ID: 84
+2026-08-31 12:21:27,249 - lumora_enrichment - DEBUG - Updated company ID: 85
+2026-08-31 12:21:27,470 - lumora_enrichment - DEBUG - Updated company ID: 86
+2026-08-31 12:21:27,690 - lumora_enrichment - DEBUG - Updated company ID: 87
+2026-08-31 12:21:28,129 - lumora_enrichment - DEBUG - Updated company ID: 89
+2026-08-31 12:21:28,348 - lumora_enrichment - DEBUG - Updated company ID: 90
+2026-08-31 12:21:28,458 - lumora_enrichment - INFO - Batch complete: 44 updated, 5 failed
+2026-08-31 12:21:28,786 - lumora_enrichment - INFO - Progress: 71/84 enriched, 13 failed
+2026-08-31 12:21:28,787 - lumora_enrichment - INFO - Processing batch 2
+2026-08-31 12:21:28,895 - lumora_enrichment - INFO - Found 0 companies to process
+2026-08-31 12:21:29,009 - lumora_enrichment - INFO - No more companies to process
+2026-08-31 12:21:29,009 - lumora_enrichment - INFO - Processing complete. Processed: 44, Failed: 5
+2026-08-31 12:21:29,158 - lumora_enrichment - INFO - Database connection closed

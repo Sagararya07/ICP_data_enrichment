@@ -1,0 +1,4 @@
+2026-08-29 14:22:25,228 - lumora_enrichment - INFO - Database connected successfully
+2026-08-29 14:22:25,449 - lumora_enrichment - INFO - Found 26 companies to backfill ICP scores.
+2026-08-29 14:22:28,634 - lumora_enrichment - INFO - Successfully backfilled ICP scores for all completed companies!
+2026-08-29 14:22:28,858 - lumora_enrichment - INFO - Database connection closed

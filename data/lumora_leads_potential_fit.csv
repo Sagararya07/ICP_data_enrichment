@@ -1,0 +1,21 @@
+company_name,website,email,phone,employees,revenue,location,social_media,industry,business_model,avg_customer_value,marketing_maturity,icp_fit_score,icp_status
+Deloitte,https://deloitte.com,ipanagiotakopoulou@deloitte.gr,+1 212-648-4363,460000,6.72E+10,,http://www.linkedin.com/company/deloitte,Retail,Hybrid,5000,Low,65,Potential Fit
+Deloitte,https://deloitte.com,ipanagiotakopoulou@deloitte.gr,+1 212-648-4363,460000,6.72E+10,,http://www.linkedin.com/company/deloitte,Retail,Hybrid,5000,Low,65,Potential Fit
+Elementor,https://elementor.com,,,480,1.460E+7,Netanya,http://www.linkedin.com/company/elementor,B2B_SaaS,Hybrid,25000,Low,60,Potential Fit
+Elementor,https://elementor.com,,,480,1.460E+7,Netanya,http://www.linkedin.com/company/elementor,B2B_SaaS,Hybrid,25000,Low,60,Potential Fit
+Empower,https://empower.com,suzanne.sanchez@empower.com,+1 847-296-8866,14000,8.9800E+8,Denver,http://www.linkedin.com/company/empowertoday,Fintech,Hybrid,3E+4,Medium,55,Potential Fit
+Empower,https://empower.com,suzanne.sanchez@empower.com,+1 847-296-8866,14000,8.9800E+8,Denver,http://www.linkedin.com/company/empowertoday,Fintech,Hybrid,3E+4,Medium,55,Potential Fit
+Michigan State University,https://msu.edu,joyceles@msu.edu,+1 517-355-1855,12000,3.1E+9,Blowing Rock,http://www.linkedin.com/school/michigan-state-university,Education,Services,1E+4,Medium,55,Potential Fit
+Michigan State University,https://msu.edu,joyceles@msu.edu,+1 517-355-1855,12000,3.1E+9,Blowing Rock,http://www.linkedin.com/school/michigan-state-university,Education,Services,1E+4,Medium,55,Potential Fit
+"University of California, Davis",https://ucdavis.edu,tskenber@ucdavis.edu,+1 530-752-1011,24000,7.8E+9,Rohnert Park,http://www.linkedin.com/school/uc-davis,Education,B2C,1E+4,Medium,45,Potential Fit
+Ontop,https://getontop.com,vforero@getontop.com,+1 800-949-2732,370,7.000E+7,,http://www.linkedin.com/company/ontopai,Other,Hybrid,588,Medium,45,Potential Fit
+Ontop,https://getontop.com,vforero@getontop.com,+1 800-949-2732,370,7.000E+7,,http://www.linkedin.com/company/ontopai,Other,Hybrid,588,Medium,45,Potential Fit
+University of Colorado Boulder,https://colorado.edu,mafr5590@colorado.edu,+1 303-735-6637,16000,2256039000,Boulder,http://www.linkedin.com/school/cuboulder,Education,Hybrid,1E+4,Medium,45,Potential Fit
+University of Colorado Boulder,https://colorado.edu,mafr5590@colorado.edu,+1 303-735-6637,16000,2256039000,Boulder,http://www.linkedin.com/school/cuboulder,Education,Hybrid,1E+4,Medium,45,Potential Fit
+"University of California, Davis",https://ucdavis.edu,tskenber@ucdavis.edu,+1 530-752-1011,24000,7.8E+9,Rohnert Park,http://www.linkedin.com/school/uc-davis,Education,B2C,1E+4,Medium,45,Potential Fit
+University of Alabama at Birmingham,https://uab.edu,jlmay@uab.edu,+1 205-934-4011,26000,5098057000,Birmingham,http://www.linkedin.com/school/uab,Healthcare,Hybrid,15000,Medium,40,Potential Fit
+Winningtemp,https://winningtemp.com,karin.dahl@winningtemp.com,+46 31 13 21 00,91,2.50E+6,Gothenburg,http://www.linkedin.com/company/winningtemp,B2B_SaaS,Hybrid,25000,Medium,40,Potential Fit
+University of Alabama at Birmingham,https://uab.edu,jlmay@uab.edu,+1 205-934-4011,26000,5098057000,Birmingham,http://www.linkedin.com/school/uab,Healthcare,Hybrid,15000,Medium,40,Potential Fit
+Gwinnett County Public Schools,https://gcpsjobs.org,cathy.hardin@gcpsk12.org,+1 678-301-6000,25000,3.2E+9,Atlanta,http://www.linkedin.com/company/gwinnett-county-public-schools,Education,Services,1E+4,Medium,40,Potential Fit
+Winningtemp,https://winningtemp.com,karin.dahl@winningtemp.com,+46 31 13 21 00,91,2.50E+6,Gothenburg,http://www.linkedin.com/company/winningtemp,B2B_SaaS,Hybrid,25000,Medium,40,Potential Fit
+Gwinnett County Public Schools,https://gcpsjobs.org,cathy.hardin@gcpsk12.org,+1 678-301-6000,25000,3.2E+9,Atlanta,http://www.linkedin.com/company/gwinnett-county-public-schools,Education,Services,1E+4,Medium,40,Potential Fit
