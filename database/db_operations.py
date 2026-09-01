@@ -13,12 +13,25 @@ class DatabaseOperations:
     async def connect(self):
         """Create connection pool to database"""
         try:
-            ssl_mode = 'require' if config.DB_HOST and 'supabase.co' in config.DB_HOST else False
+            db_host = config.DB_HOST
+            db_port = config.DB_PORT
+            db_user = config.DB_USER
+            
+            ssl_mode = 'require' if db_host and 'supabase.co' in db_host else False
+
+            # Vercel AWS Lambda does not support IPv6 well, which Supabase uses on port 5432.
+            # Force the use of the Supabase connection pooler on port 6543 (IPv4)
+            if db_host and 'supabase.co' in db_host:
+                db_port = '6543'
+                project_ref = db_host.split('.')[1]
+                if '.' not in db_user:
+                    db_user = f"{db_user}.{project_ref}"
+
             self.pool = await asyncpg.create_pool(
-                host=config.DB_HOST,
-                port=config.DB_PORT,
+                host=db_host,
+                port=db_port,
                 database=config.DB_NAME,
-                user=config.DB_USER,
+                user=db_user,
                 password=config.DB_PASSWORD,
                 min_size=5,
                 max_size=20,
