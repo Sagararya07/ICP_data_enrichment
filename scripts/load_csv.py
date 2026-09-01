@@ -25,7 +25,7 @@ async def load(csv_path):
 
     if not await db_ops.connect():
         logger.error("Could not connect to database")
-        return
+        raise Exception("Could not connect to database. Check Vercel environment variables.")
 
     inserted = 0
     async with db_ops.pool.acquire() as conn:

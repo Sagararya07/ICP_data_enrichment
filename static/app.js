@@ -144,9 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('/api/status');
             const data = await response.json();
             
-            const total = data.total;
-            const enriched = data.enriched;
-            const failed = data.failed;
+            if (!response.ok) {
+                console.error("Status endpoint error:", data.detail);
+                return;
+            }
+            
+            const total = data.total || 0;
+            const enriched = data.enriched || 0;
+            const failed = data.failed || 0;
             const strongFits = data.strong_fits || 0;
             const potentialFits = data.potential_fits || 0;
             const notFits = data.not_fits || 0;
