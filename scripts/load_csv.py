@@ -39,8 +39,8 @@ async def load(csv_path):
                 continue  # Skip this company, it's already in the database
                 
             await conn.execute("""
-                INSERT INTO leads (company_name, website, email, phone, employees, revenue, location, social_media)
-                VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+                INSERT INTO leads (company_name, website, email, phone, employees, revenue, location, social_media, leader_name, leader_role, leader_social_media)
+                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
             """,
                 row.get('company_name'),
                 row.get('website'),
@@ -50,6 +50,9 @@ async def load(csv_path):
                 float(row['revenue']) if pd.notna(row.get('revenue')) else None,
                 row.get('location') if pd.notna(row.get('location')) else None,
                 row.get('social_media') if pd.notna(row.get('social_media')) else None,
+                row.get('leader_name') if pd.notna(row.get('leader_name')) else None,
+                row.get('leader_role') if pd.notna(row.get('leader_role')) else None,
+                row.get('leader_social_media') if pd.notna(row.get('leader_social_media')) else None,
             )
             inserted += 1
 

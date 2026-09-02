@@ -1,0 +1,4 @@
+2026-09-02 12:08:14,197 - lumora_enrichment - INFO - Database connected successfully
+2026-09-02 12:08:14,198 - lumora_enrichment - INFO - Adding leader columns to 'leads' table...
+2026-09-02 12:08:14,341 - lumora_enrichment - INFO - Successfully added leader columns.
+2026-09-02 12:08:14,564 - lumora_enrichment - INFO - Database connection closed

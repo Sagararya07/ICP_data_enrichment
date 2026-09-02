@@ -128,6 +128,7 @@ class DatabaseOperations:
                     COUNT(*) as total,
                     COUNT(CASE WHEN industry IS NOT NULL AND industry != 'Unknown' THEN 1 END) as enriched,
                     COUNT(CASE WHEN enrichment_status = 'failed' THEN 1 END) as failed,
+                    COUNT(CASE WHEN icp_status = 'Eligible Company' THEN 1 END) as eligible_companies,
                     COUNT(CASE WHEN icp_status = 'Strong Fit' THEN 1 END) as strong_fits,
                     COUNT(CASE WHEN icp_status = 'Potential Fit' THEN 1 END) as potential_fits,
                     COUNT(CASE WHEN icp_status = 'Not a Fit' THEN 1 END) as not_fits
@@ -138,6 +139,7 @@ class DatabaseOperations:
                 'total': rows[0]['total'],
                 'enriched': rows[0]['enriched'],
                 'failed': rows[0]['failed'],
+                'eligible_companies': rows[0]['eligible_companies'] or 0,
                 'strong_fits': rows[0]['strong_fits'] or 0,
                 'potential_fits': rows[0]['potential_fits'] or 0,
                 'not_fits': rows[0]['not_fits'] or 0
@@ -149,6 +151,7 @@ class DatabaseOperations:
             query = """
                 SELECT 
                     company_name, website, email, phone, employees, revenue, location, social_media,
+                    leader_name, leader_role, leader_social_media,
                     industry, business_model, avg_customer_value, marketing_maturity, 
                     icp_fit_score, icp_status
                 FROM leads

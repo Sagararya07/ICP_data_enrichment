@@ -12,7 +12,11 @@ column_mapping = {
     '# Employees': 'employees',
     'Annual Revenue': 'revenue',
     'City': 'location',
-    'Company Linkedin Url': 'social_media'
+    'Company Linkedin Url': 'social_media',
+    'First Name': 'first_name',
+    'Last Name': 'last_name',
+    'Title': 'leader_role',
+    'Person Linkedin Url': 'leader_social_media'
 }
 
 df = df.rename(columns=column_mapping)
@@ -21,8 +25,19 @@ df = df.rename(columns=column_mapping)
 # Some companies in the user's CSV are duplicated (e.g., Northwestern University, Deloitte)
 df = df.drop_duplicates(subset=['website'])
 
+# Combine First and Last name into leader_name
+if 'first_name' in df.columns and 'last_name' in df.columns:
+    df['leader_name'] = df['first_name'].fillna('') + ' ' + df['last_name'].fillna('')
+    df['leader_name'] = df['leader_name'].str.strip()
+else:
+    df['leader_name'] = ''
+
 # Keep only the columns we need (and ignore others)
-cols_to_keep = list(column_mapping.values())
+cols_to_keep = [
+    'company_name', 'website', 'email', 'phone', 'employees', 'revenue', 
+    'location', 'social_media', 'leader_name', 'leader_role', 'leader_social_media'
+]
+
 # Ensure all target columns exist (fill missing with empty if needed)
 for col in cols_to_keep:
     if col not in df.columns:

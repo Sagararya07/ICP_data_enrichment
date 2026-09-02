@@ -25,7 +25,7 @@ async def main():
         async with db_ops.pool.acquire() as conn:
             # Fetch all rows that are completed but have no icp_status
             rows = await conn.fetch("""
-                SELECT id, business_model, avg_customer_value, growth_signals, marketing_maturity
+                SELECT id, business_model, avg_customer_value, growth_signals, marketing_maturity, employees, revenue
                 FROM leads
                 WHERE enrichment_status = 'completed'
             """)
@@ -50,10 +50,12 @@ async def main():
                     growth_signals = {}
                     
                 marketing_maturity = row['marketing_maturity'] or 'Unknown'
+                employees = row['employees'] or 0
+                revenue = row['revenue'] or 0
                 
                 # Calculate the new score
                 score, status = analyzer.calculate_icp_fit(
-                    business_model, customer_value, growth_signals, marketing_maturity
+                    business_model, customer_value, growth_signals, marketing_maturity, employees, revenue
                 )
                 
                 # Update the row

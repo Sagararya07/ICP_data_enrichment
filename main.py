@@ -35,7 +35,7 @@ class EnrichmentEngine:
                 logger.warning(f"No data scraped for {company['company_name']}")
                 return None
 
-            analysis = self.analyzer.analyze_company(scraped_data)
+            analysis = self.analyzer.analyze_company(scraped_data, company)
 
             if 'error' in analysis:
                 logger.warning(f"Analysis error for {company['company_name']}: {analysis['error']}")

@@ -67,6 +67,10 @@
                         <span class="stat-value text-success" id="enrichedCount">0</span>
                     </div>
                     <div class="stat-box">
+                        <span class="stat-label">💎 Eligible</span>
+                        <span class="stat-value text-accent" id="eligibleCount" style="color: #10b981;">0</span>
+                    </div>
+                    <div class="stat-box">
                         <span class="stat-label">🔥 Strong Fits</span>
                         <span class="stat-value text-accent" id="strongFitCount" style="color: var(--accent);">0</span>
                     </div>
@@ -97,6 +101,9 @@
                 <div class="actions-section" style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
                     <button class="btn btn-primary" id="runEnrichmentBtn">
                         <i class="fa-solid fa-play"></i> Start Enrichment
+                    </button>
+                    <button class="btn btn-secondary" id="exportEligibleBtn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <i class="fa-solid fa-download" style="color: #10b981;"></i> Eligible
                     </button>
                     <button class="btn btn-secondary" id="exportStrongBtn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                         <i class="fa-solid fa-download text-accent"></i> Strong Fits

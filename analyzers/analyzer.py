@@ -17,16 +17,16 @@ class AIAnalyzer:
         # page. A page that mentions "$99/month" and, elsewhere, "annual
         # report" no longer gets the monthly price annualized incorrectly.
         self._monthly_patterns = [
-            r'\$\s*(\d+[\.,]?\d*)\s*per\s*(?:month|monthly)',
-            r'\$\s*(\d+[\.,]?\d*)\s*\/\s*month',
+            r'(?:₹|rs\.?|inr)\s*(\d+[\.,]?\d*)\s*per\s*(?:month|monthly)',
+            r'(?:₹|rs\.?|inr)\s*(\d+[\.,]?\d*)\s*\/\s*month',
         ]
         self._yearly_patterns = [
-            r'\$\s*(\d+[\.,]?\d*)\s*per\s*(?:year|annually|yearly)',
-            r'\$\s*(\d+[\.,]?\d*)\s*\/\s*year',
+            r'(?:₹|rs\.?|inr)\s*(\d+[\.,]?\d*)\s*per\s*(?:year|annually|yearly)',
+            r'(?:₹|rs\.?|inr)\s*(\d+[\.,]?\d*)\s*\/\s*year',
         ]
         self._unspecified_patterns = [
-            r'starting\s*at\s*\$\s*(\d+[\.,]?\d*)',
-            r'prices?\s*start\s*at\s*\$\s*(\d+[\.,]?\d*)',
+            r'starting\s*at\s*(?:₹|rs\.?|inr)\s*(\d+[\.,]?\d*)',
+            r'prices?\s*start\s*at\s*(?:₹|rs\.?|inr)\s*(\d+[\.,]?\d*)',
         ]
 
     def detect_industry(self, text):
@@ -157,19 +157,24 @@ class AIAnalyzer:
             return 'Medium'
         return 'Low'
 
-    def calculate_icp_fit(self, business_model, customer_value, growth_signals, marketing_maturity):
+    def calculate_icp_fit(self, business_model, customer_value, growth_signals, marketing_maturity, employees=0, revenue=0):
         """Calculate a 0-100 score indicating if this company is a strong fit for a marketing agency"""
+        
+        # Override for Eligible Company
+        if employees and revenue and employees >= 20 and revenue >= 3500000:
+            return 100, 'Eligible Company'
+            
         score = 0
         
         # 1. Business Model (No points awarded per user request)
         # We still keep the parameter for backwards compatibility, but it awards 0 points.
             
-        # 2. Customer Value (Max 35 points)
-        if customer_value > 50000:
+        # 2. Customer Value (Max 35 points) - Scaled for INR
+        if customer_value > 2500000:
             score += 35
-        elif customer_value > 15000:
+        elif customer_value > 1000000:
             score += 20
-        elif customer_value > 1000:
+        elif customer_value > 100000:
             score += 10
             
         # 3. Growth Signals (Max 45 points)
@@ -196,7 +201,7 @@ class AIAnalyzer:
             
         return score, status
 
-    def analyze_company(self, scraped_data):
+    def analyze_company(self, scraped_data, company_data=None):
         """Complete analysis pipeline for a single company"""
         if not scraped_data or 'error' in scraped_data:
             return {
@@ -224,7 +229,12 @@ class AIAnalyzer:
         marketing_activity = self.detect_marketing_activity(full_text, scraped_data)
         marketing_maturity = self.assess_marketing_maturity(marketing_activity)
         
-        icp_fit_score, icp_status = self.calculate_icp_fit(business_model, customer_value, growth_signals, marketing_maturity)
+        employees = company_data.get('employees', 0) if company_data else 0
+        revenue = company_data.get('revenue', 0) if company_data else 0
+        
+        icp_fit_score, icp_status = self.calculate_icp_fit(
+            business_model, customer_value, growth_signals, marketing_maturity, employees, revenue
+        )
 
         return {
             'industry': industry,

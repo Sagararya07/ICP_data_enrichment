@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const engineStatus = document.getElementById('engineStatus');
     const pendingCount = document.getElementById('pendingCount');
     const enrichedCount = document.getElementById('enrichedCount');
+    const eligibleCount = document.getElementById('eligibleCount');
     const strongFitCount = document.getElementById('strongFitCount');
     const potentialFitCount = document.getElementById('potentialFitCount');
     const notFitCount = document.getElementById('notFitCount');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.getElementById('progressBar');
     const progressPercent = document.getElementById('progressPercent');
 
+    const exportEligibleBtn = document.getElementById('exportEligibleBtn');
     const exportStrongBtn = document.getElementById('exportStrongBtn');
     const exportPotentialBtn = document.getElementById('exportPotentialBtn');
     const exportAllBtn = document.getElementById('exportAllBtn');
@@ -152,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const total = data.total || 0;
             const enriched = data.enriched || 0;
             const failed = data.failed || 0;
+            const eligible = data.eligible_companies || 0;
             const strongFits = data.strong_fits || 0;
             const potentialFits = data.potential_fits || 0;
             const notFits = data.not_fits || 0;
@@ -159,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             pendingCount.textContent = pending;
             enrichedCount.textContent = enriched;
+            eligibleCount.textContent = eligible;
             strongFitCount.textContent = strongFits;
             potentialFitCount.textContent = potentialFits;
             notFitCount.textContent = notFits;
@@ -200,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = url;
     }
 
+    exportEligibleBtn.addEventListener('click', () => triggerExport('Eligible Company'));
     exportStrongBtn.addEventListener('click', () => triggerExport('Strong Fit'));
     exportPotentialBtn.addEventListener('click', () => triggerExport('Potential Fit'));
     exportAllBtn.addEventListener('click', () => triggerExport('All'));
