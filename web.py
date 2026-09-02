@@ -6,7 +6,7 @@ from scripts.load_csv import load as load_csv_data
 from main import EnrichmentEngine
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import Response
+from fastapi.responses import Response, FileResponse
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
