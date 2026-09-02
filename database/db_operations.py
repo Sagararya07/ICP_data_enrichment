@@ -35,7 +35,8 @@ class DatabaseOperations:
                 password=config.DB_PASSWORD,
                 min_size=5,
                 max_size=20,
-                ssl=ssl_mode
+                ssl=ssl_mode,
+                statement_cache_size=0
             )
             logger.info("Database connected successfully")
             return True
