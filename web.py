@@ -6,7 +6,7 @@ from scripts.load_csv import load as load_csv_data
 from main import EnrichmentEngine
 from fastapi import FastAPI, UploadFile, File, BackgroundTasks, HTTPException
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import Response
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -126,11 +126,10 @@ async def export_csv(fit_status: str = None):
     df.to_csv(csv_buffer, index=False)
     csv_buffer.seek(0)
     
-    filename = f"lumora_leads_{fit_status.lower().replace(' ', '_')}.csv" if fit_status else "lumora_leads_all.csv"
+    filename = f"lumora_leads_{fit_status.lower().replace(' ', '_')}.csv" if fit_status and fit_status != 'All' else "lumora_leads_all.csv"
     
-    # Write to a temp file and return FileResponse to make downloading easier in FastAPI
-    os.makedirs('/tmp', exist_ok=True)
-    temp_path = f"/tmp/{filename}"
-    df.to_csv(temp_path, index=False)
-    
-    return FileResponse(temp_path, media_type="text/csv", filename=filename)
+    return Response(
+        content=csv_buffer.getvalue(),
+        media_type="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={filename}"}
+    )
