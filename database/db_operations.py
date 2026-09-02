@@ -78,6 +78,9 @@ class DatabaseOperations:
 
     async def update_company_enrichment(self, company_id, enriched_data):
         """Update company with enrichment results"""
+        emails_str = ", ".join(enriched_data.get('emails', [])) if enriched_data.get('emails') else None
+        phones_str = ", ".join(enriched_data.get('phones', [])) if enriched_data.get('phones') else None
+
         async with self.pool.acquire() as conn:
             await conn.execute("""
                 UPDATE leads SET
@@ -92,8 +95,10 @@ class DatabaseOperations:
                     enrichment_status = 'completed',
                     processed_date = $9,
                     icp_fit_score = $10,
-                    icp_status = $11
-                WHERE id = $12
+                    icp_status = $11,
+                    scraped_email = $12,
+                    scraped_phone = $13
+                WHERE id = $14
             """,
                 enriched_data.get('industry'),
                 enriched_data.get('business_model'),
@@ -106,6 +111,8 @@ class DatabaseOperations:
                 datetime.now(),
                 enriched_data.get('icp_fit_score', 0),
                 enriched_data.get('icp_status', 'Unknown'),
+                emails_str,
+                phones_str,
                 company_id
             )
 
@@ -151,7 +158,7 @@ class DatabaseOperations:
             query = """
                 SELECT 
                     company_name, website, email, phone, employees, revenue, location, social_media,
-                    leader_name, leader_role, leader_social_media,
+                    leader_name, leader_role, leader_social_media, scraped_email, scraped_phone,
                     industry, business_model, avg_customer_value, marketing_maturity, 
                     icp_fit_score, icp_status
                 FROM leads

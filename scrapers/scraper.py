@@ -1,5 +1,6 @@
 import aiohttp
 import asyncio
+import re
 from bs4 import BeautifulSoup
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
@@ -144,6 +145,17 @@ class AsyncScraper:
             'googletagmanager', 'googleadservices', 'facebook.com/tr',
             'googleads', 'adwords', 'analytics.js', 'gtag'
         ])
+        
+        # Extract Emails
+        emails = re.findall(r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+', text)
+        valid_emails = [e for e in set(emails) if not e.endswith(('.png', '.jpg', '.jpeg', '.gif', '.css', '.js')) and 'example' not in e.lower()]
+        
+        # Extract Phones (primarily from tel: links for accuracy)
+        phones = []
+        for a in soup.find_all('a', href=True):
+            if a['href'].startswith('tel:'):
+                phones.append(a['href'].replace('tel:', '').strip())
+        phones = list(set(phones))
 
         return {
             'url': url,
@@ -156,7 +168,9 @@ class AsyncScraper:
             'has_pricing': has_pricing,
             'social_links': social_links,
             'has_ads': has_ads,
-            'link_count': len(links)
+            'link_count': len(links),
+            'emails': valid_emails,
+            'phones': phones
         }
 
     async def scrape_company(self, url):

@@ -246,5 +246,7 @@ class AIAnalyzer:
             'marketing_activity': marketing_activity,
             'marketing_maturity': marketing_maturity,
             'icp_fit_score': icp_fit_score,
-            'icp_status': icp_status
+            'icp_status': icp_status,
+            'emails': scraped_data.get('emails', []),
+            'phones': scraped_data.get('phones', [])
         }
