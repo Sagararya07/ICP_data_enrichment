@@ -121,8 +121,10 @@ async def export_csv(fit_status: str = None):
         
     df = pd.DataFrame(leads)
     
+    from io import StringIO
+    
     # Save to memory buffer
-    csv_buffer = BytesIO()
+    csv_buffer = StringIO()
     df.to_csv(csv_buffer, index=False)
     csv_buffer.seek(0)
     
