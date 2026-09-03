@@ -51,7 +51,11 @@ class EnrichmentEngine:
                 'social_links': scraped_data.get('social_links', []),
                 'has_blog': scraped_data.get('has_blog', False),
                 'has_careers': scraped_data.get('has_careers', False),
-                'has_pricing': scraped_data.get('has_pricing', False)
+                'has_pricing': scraped_data.get('has_pricing', False),
+                'icp_fit_score': analysis['icp_fit_score'],
+                'icp_status': analysis['icp_status'],
+                'emails': analysis.get('emails', []),
+                'phones': analysis.get('phones', [])
             }
 
         except Exception as e:

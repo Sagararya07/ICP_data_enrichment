@@ -1,0 +1,7 @@
+2026-09-02 21:37:32,060 - lumora_enrichment - INFO - Starting Enrichment Engine
+2026-09-02 21:37:34,597 - lumora_enrichment - INFO - Database connected successfully
+2026-09-02 21:37:34,597 - lumora_enrichment - INFO - Processing batch 1
+2026-09-02 21:37:34,826 - lumora_enrichment - INFO - Found 0 companies to process
+2026-09-02 21:37:34,943 - lumora_enrichment - INFO - No more companies to process
+2026-09-02 21:37:34,943 - lumora_enrichment - INFO - Processing complete. Processed: 0, Failed: 0
+2026-09-02 21:37:35,062 - lumora_enrichment - INFO - Database connection closed
